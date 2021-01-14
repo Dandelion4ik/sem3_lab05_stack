@@ -58,7 +58,7 @@ template<typename T>
 void stack<T>::pop() {
     if (head_) {
         auto *FIRST = head_;
-        head_ = head_->prev;  // теперь "вершина" стека - это предыдущий элемент
+        head_ = head_->prev;
         delete FIRST;
     } else {
         throw std::out_of_range("Stack is empty!");
@@ -70,15 +70,15 @@ const T &stack<T>::head() const {
     if (!head_) {
         throw std::out_of_range("Stack is empty!");
     }
-    return head_->value;  // возвращаем значение элемента
+    return head_->value;
 }
 
 template<typename T>
 stack<T>::~stack() {
     while (head_) {
-        auto *current_element = head_;  // текущий элемент - теперь "вершина"
-        head_ = head_->prev;  // "вершина" является предыдущим элементом
-        delete current_element;  // уничтожаем текущий элемент
+        auto *current_element = head_;
+        head_ = head_->prev;
+        delete current_element;
     }
 }
 
