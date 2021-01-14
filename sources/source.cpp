@@ -1,3 +1,1 @@
-// Copyright 2020 Your Name <your_email>
-
-#include <header.hpp>
+// Copyright 2021 Kavykin Andrey Kaviandr@yandex.ru
