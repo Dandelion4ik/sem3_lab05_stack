@@ -29,7 +29,7 @@ public:
 
     auto operator=(stack &&st) noexcept -> stack & = default;
 
-    ~stack();  // деструктор
+    ~stack();
 
     void push(const T &value);
 
